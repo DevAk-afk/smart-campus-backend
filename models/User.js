@@ -9,6 +9,8 @@ const userSchema = new mongoose.Schema(
     role: { type: String, enum: ["student", "admin"], default: "student" },
     rollNumber: { type: String },
     department: { type: String },
+    isBanned: { type: Boolean, default: false },
+    banReason: { type: String, default: "" },
   },
   { timestamps: true }
 );
